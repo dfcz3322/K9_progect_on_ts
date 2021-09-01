@@ -26,8 +26,8 @@ export class K9 {
     }
 
     public setDogToEmployee(employeeName: string, dogName: string): void {
-        const employee = this.employees.find((employee: IEmployee) => employee.name === employeeName);
-        const dog = this.dogs.find((dog: IDog) => dog.name === dogName);
+        const employee: IEmployee = this.employees.find((employee: IEmployee) => employee.name === employeeName);
+        const dog: IDog = this.dogs.find((dog: IDog) => dog.name === dogName);
         employee.addDog(dog).then((dog: IDog) => console.log(dog.name + " was added!"));
     }
 
